@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TextFielder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zipcode" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="UKD-vU-2iQ" userLabel="Zipcode Text Field">
+                                <rect key="frame" x="30" y="124" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6I0-ee-pLB" userLabel="Money Text Field">
+                                <rect key="frame" x="30" y="190" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Locked" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qyd-q9-jU5" userLabel="Lockable Text Field">
+                                <rect key="frame" x="30" y="256" width="295" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TJ7-C4-frD" userLabel="Lockable Text Field Switch">
+                                <rect key="frame" x="335" y="256" width="51" height="31"/>
+                                <color key="onTintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="toggleTheTextEditor:" destination="BYZ-38-t0r" eventType="valueChanged" id="may-nO-ghY"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TJ7-C4-frD" secondAttribute="trailing" constant="30" id="8bA-1z-13P"/>
+                            <constraint firstItem="6I0-ee-pLB" firstAttribute="centerX" secondItem="UKD-vU-2iQ" secondAttribute="centerX" id="BMh-jr-Ppr"/>
+                            <constraint firstItem="Qyd-q9-jU5" firstAttribute="height" secondItem="6I0-ee-pLB" secondAttribute="height" id="Na0-2m-Snb"/>
+                            <constraint firstItem="TJ7-C4-frD" firstAttribute="leading" secondItem="Qyd-q9-jU5" secondAttribute="trailing" constant="10" id="SDH-Ly-5ho"/>
+                            <constraint firstItem="UKD-vU-2iQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="TQv-iJ-sNf"/>
+                            <constraint firstItem="6I0-ee-pLB" firstAttribute="top" secondItem="UKD-vU-2iQ" secondAttribute="bottom" constant="32" id="WYD-al-8Wz"/>
+                            <constraint firstItem="6I0-ee-pLB" firstAttribute="width" secondItem="UKD-vU-2iQ" secondAttribute="width" id="Y11-jH-GeB"/>
+                            <constraint firstItem="Qyd-q9-jU5" firstAttribute="top" secondItem="6I0-ee-pLB" secondAttribute="bottom" constant="32" id="d2P-cH-QBp"/>
+                            <constraint firstItem="UKD-vU-2iQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="f5y-Tb-ATT"/>
+                            <constraint firstItem="UKD-vU-2iQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gpw-EI-Zk2"/>
+                            <constraint firstItem="Qyd-q9-jU5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="hnP-YQ-10g"/>
+                            <constraint firstItem="TJ7-C4-frD" firstAttribute="top" secondItem="6I0-ee-pLB" secondAttribute="bottom" constant="32" id="koa-NS-M4O"/>
+                            <constraint firstItem="6I0-ee-pLB" firstAttribute="height" secondItem="UKD-vU-2iQ" secondAttribute="height" id="qkz-eb-7FZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="textField1" destination="UKD-vU-2iQ" id="PgP-NN-oNU"/>
+                        <outlet property="textField2" destination="6I0-ee-pLB" id="TsE-bb-tzy"/>
+                        <outlet property="textField3" destination="Qyd-q9-jU5" id="XL5-yd-T67"/>
+                        <outlet property="textLockSwitch" destination="TJ7-C4-frD" id="O3L-qu-t5c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+</document>
